@@ -173,7 +173,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-01-31 16:31:45 / Modified: 17:03:15" itemprop="dateCreated datePublished" datetime="2021-01-31T16:31:45+08:00">2021-01-31</time>
+              <time title="Created: 2021-01-31 16:31:45 / Modified: 17:36:56" itemprop="dateCreated datePublished" datetime="2021-01-31T16:31:45+08:00">2021-01-31</time>
             </span>
 
           
@@ -187,7 +187,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="物件概念"><a href="#物件概念" class="headerlink" title="物件概念"></a>物件概念</h3>
+          <h3 id="物件"><a href="#物件" class="headerlink" title="物件"></a>物件</h3><h4 id="變數無法被刪除，屬性才可以"><a href="#變數無法被刪除，屬性才可以" class="headerlink" title="變數無法被刪除，屬性才可以"></a>變數無法被刪除，屬性才可以</h4><p>一般我們要刪除一個物件中的屬性時，會使用delete<br>    var newCat = {<br>        color:’orange’,<br>        kilo:4.5,<br>        eye_color:’orange’<br>    }<br>    //delete color 屬性<br>    delete color;</p>
+<p>然而，雖說可以delete屬性，但這一方法無法套用至變數<br>    var b = ‘cat’;<br>    //(X)以下是錯誤的<br>    delete b;<br>    //但未定義成變數的可delete,因為c會被判斷成window.c,而此處的window正是物件,c為屬性,故可如此<br>    c = ‘kitty’;<br>    delete c;</p>
+
       
     </div>
 
