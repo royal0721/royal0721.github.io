@@ -28,7 +28,7 @@
 <meta property="og:description" content="Function 概念整理 立即函式12345678(function example(param)&amp;#123;    console.log(param,example);&amp;#125;(&#39;stacy&#39;));&#x2F;&#x2F;傳入參數可以放（）外的（）內(function example(param)&amp;#123;    console.log(param,example);&amp;">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-02-01T09:55:02.000Z">
-<meta property="article:modified_time" content="2021-02-02T03:32:25.880Z">
+<meta property="article:modified_time" content="2021-02-02T03:36:24.290Z">
 <meta property="article:author" content="Clemmy Liao">
 <meta property="article:tag" content="Javascript Function">
 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-02-02 11:32:25" itemprop="dateModified" datetime="2021-02-02T11:32:25+08:00">2021-02-02</time>
+                <time title="Modified: 2021-02-02 11:36:24" itemprop="dateModified" datetime="2021-02-02T11:36:24+08:00">2021-02-02</time>
               </span>
 
           
@@ -203,8 +203,8 @@
 <li>函式能夠存取的範疇，即是其被內嵌後往外推的範圍。</li>
 <li>Javascript 垃圾回收機制會釋放不再用的記憶體，但是在閉包因為目的在於能存取語言範疇，因此在是不再釋放不用的記憶體，會予以保留，不做記憶體回收。</li>
 </ul>
-<p>內層函式由於具有閉包的特性，因此可存取外層的變數和函式（something 與 another）。透過模組模式，可隱藏私密資訊，並選擇對外公開的 API。 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">function exampleModule()&#123;</span><br><span class="line"></span><br><span class="line">    var something &#x3D; &#39;&#39;;</span><br><span class="line">    var another &#x3D; [1, 2, 3];</span><br><span class="line"></span><br><span class="line">    function doSomething() &#123;</span><br><span class="line">        console.log(something);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function doAnother() &#123;</span><br><span class="line">        console.log(another.join(&#39; ! &#39;));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return &#123;        </span><br><span class="line">        doSomething: doSomething,</span><br><span class="line">        doAnother: doAnother,</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>內層函式由於具有閉包的特性，因此可存取外層的變數和函式（something 與 another）。透過模組模式，可隱藏私密資訊，並選擇對外公開的API。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">function exampleModule()&#123;</span><br><span class="line"></span><br><span class="line">    var something &#x3D; &#39;&#39;;</span><br><span class="line">    var another &#x3D; [1, 2, 3];</span><br><span class="line"></span><br><span class="line">    function doSomething() &#123;</span><br><span class="line">        console.log(something);</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;singleton</span><br><span class="line">    function doAnother() &#123;</span><br><span class="line">        console.log(another.join(&#39; ! &#39;));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return &#123;        </span><br><span class="line">        doSomething: doSomething,</span><br><span class="line">        doAnother: doAnother,</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
