@@ -29,7 +29,7 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/images/logo.svg" alt="Secured by Kika" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Follow on GitHub" href="https://github.com/royal0721/"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories/">Categories</a></li><li class="is-active"><a href="#" aria-current="page">資訊安全</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2025-07-06T08:05:00.000Z" title="2025/7/6 下午4:05:00">2025-07-06</time></span><span class="level-item">Updated&nbsp;<time dateTime="2025-10-06T05:07:03.512Z" title="2025/10/6 下午1:07:03">2025-10-06</time></span><span class="level-item"> Kika Liao </span><span class="level-item"><a class="link-muted" href="/categories/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8/">資訊安全</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/07/06/packet-analysis/">HTB - Linux 提權筆記 - 第一彈</a></p><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><hr>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/images/logo.svg" alt="Secured by Kika" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Follow on GitHub" href="https://github.com/royal0721/"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories/">Categories</a></li><li class="is-active"><a href="#" aria-current="page">資訊安全</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2025-07-06T08:05:00.000Z" title="2025/7/6 下午4:05:00">2025-07-06</time></span><span class="level-item">Updated&nbsp;<time dateTime="2025-10-06T05:09:25.313Z" title="2025/10/6 下午1:09:25">2025-10-06</time></span><span class="level-item"> Kika Liao </span><span class="level-item"><a class="link-muted" href="/categories/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8/">資訊安全</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/07/06/packet-analysis/">HTB - Linux 提權筆記 - 第一彈</a></p><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><hr>
 <p>最近開始在密集的訓練自己滲透的能力，所以開始學了 Linux 提權、Windows 提權</p>
 <p>一開始面對這麼多指令真心覺得腦容量不足，要學的基礎知識也爆炸多，於是就開始了部落格的筆記之路!</p>
 <p><img src="/../images/pasted-1.png" alt="Linux 模組名稱"></p>
@@ -55,7 +55,7 @@
 
 <p>這其實就是在試圖將目前執行的 process 身份切換為 <code>UID 0</code>，也就是 root！</p>
 <hr>
-<h3 id="限制型-Shell"><a href="#限制型-Shell" class="headerlink" title="限制型 Shell"></a>限制型 Shell</h3><p>Shell 的種類就像貓的脾氣一樣多，有的乖巧、有的傲嬌、有的…… 會把你關在籠子裡 (???)</p>
+<h3 id="限制型-Shell"><a href="#限制型-Shell" class="headerlink" title="限制型 Shell"></a>限制型 Shell</h3><p>Shell 的種類就像貓的脾氣一樣多，有的乖巧、有的傲嬌、有的 …… 會把你關在籠子裡</p>
 <p>限制型 Shell（Restricted Shell）就是那種「很愛限制你想去哪」的類型</p>
 <p>你以為輸個 bash 就能開新視窗？ </p>
 <blockquote>
@@ -66,6 +66,7 @@
 <p>打妹</p>
 </blockquote>
 <p>它的愛讓人窒息，但也讓人興奮——因為每一次逃出它的瞬間，都是駭客的勝利時刻!</p>
+<hr>
 <p>以 RBASH、RKSH、RZSH 為例:</p>
 <h4 id="RBASH、RKSH、RZSH"><a href="#RBASH、RKSH、RZSH" class="headerlink" title="RBASH、RKSH、RZSH"></a>RBASH、RKSH、RZSH</h4><table>
 <thead>
@@ -95,6 +96,7 @@
 <td>限制執行 script、alias、自定義變數等</td>
 </tr>
 </tbody></table>
+<hr>
 <h4 id="為什麼要知道限制型-Shell"><a href="#為什麼要知道限制型-Shell" class="headerlink" title="為什麼要知道限制型 Shell?"></a>為什麼要知道限制型 Shell?</h4><p>這個問題其實很簡單，因為如果知道限制型 shell:</p>
 <blockquote>
 <p>我們大致上會知道我們在哪個 shell，等於知道「被限制什麼」、也就知道該怎麼「突破限制」</p>
